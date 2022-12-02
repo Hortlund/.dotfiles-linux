@@ -70,9 +70,19 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    tmux
+    docker
+    docker-compose
+)
 
 source $ZSH/oh-my-zsh.sh
+
+#alias ls="exa"
+#alias cd="z"
+#alias cat="bat"
+#alias vi="nvim"
 
 # User configuration
 
@@ -101,5 +111,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/perl5/perlbrew/etc/bashrc
 
+
+
 [[ -s "/home/hortlund/.gvm/scripts/gvm" ]] && source "/home/hortlund/.gvm/scripts/gvm"
 alias config='/usr/bin/git --git-dir=/home/hortlund/.dotfiles/ --work-tree=/home/hortlund'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#eval "$(zoxide init zsh)"

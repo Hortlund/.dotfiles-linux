@@ -79,10 +79,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-#alias ls="exa"
-#alias cd="z"
-#alias cat="bat"
-#alias vi="nvim"
+alias ls="exa"
+alias cd="z"
+alias cat="bat"
+alias vi="nvim"
 
 # User configuration
 
@@ -111,7 +111,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/perl5/perlbrew/etc/bashrc
 
-
+eval "$(zoxide init zsh)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 [[ -s "/home/hortlund/.gvm/scripts/gvm" ]] && source "/home/hortlund/.gvm/scripts/gvm"
 alias config='/usr/bin/git --git-dir=/home/hortlund/.dotfiles/ --work-tree=/home/hortlund'
@@ -120,4 +121,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-#eval "$(zoxide init zsh)"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+

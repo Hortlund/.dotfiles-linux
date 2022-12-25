@@ -6,7 +6,7 @@ local xnoremap = Remap.xnoremap
 local nmap = Remap.nmap
 
 --Stolen shamelessly from ThePrimeagen
-
+nnoremap("<leader>pv", vim.cmd.Ex)
 --Moves slected lines up and down
 vnoremap("J", ":m '>+1<CR>gv=gv")
 vnoremap("K", ":m '<-2<CR>gv=gv")
@@ -39,7 +39,7 @@ vnoremap("<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", { noremap = true, si
 
 --map("n", "<C-p>", "<cmd>Telescope find_files<CR>")
 nmap("<C-f>", "<cmd>Telescope live_grep<CR>")
-nmap("<Leader>f", "<cmd>Telescope grep_string<CR>")
+--nmap("<Leader>f", "<cmd>Telescope grep_string<CR>")
 nmap("<Leader>s", ":<C-u>call gitblame#echo()<CR>")
 nmap("<Leader>b", ":! perl $HOME/Documents/git/air8/_VERKTYG/publish.pm %:p 1<CR>")
 nmap("<Leader>n", ":! perl $HOME/Documents/git/air8/_VERKTYG/publish.pm %:p<CR>")

@@ -5,7 +5,7 @@ vim.g.catppuccin_flavour = "mocha"
 
 require("catppuccin").setup()
 
-vim.cmd [[colorscheme catppuccin]]
+vim.cmd.colorscheme "catppuccin"
 
 vim.api.nvim_command('autocmd BufRead,BufNewFile $HOME/Documents/git/air8/* setlocal fileencodings=iso-8859-1')
 vim.api.nvim_command('au BufNewFile,BufRead *.tt set filetype=tt2html')

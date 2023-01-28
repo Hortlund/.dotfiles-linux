@@ -31,6 +31,7 @@ return require('packer').startup(function()
 	use {
 		'zivyangll/git-blame.vim'
 	}
+    use {'nvim-tree/nvim-tree.lua'}
     use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
@@ -52,6 +53,8 @@ return require('packer').startup(function()
       {'rafamadriz/friendly-snippets'},
     }
   }
+
+  use 'akinsho/toggleterm.nvim'
 
 end)
 
